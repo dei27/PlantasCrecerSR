@@ -3,3 +3,41 @@
     padding: 0;
     box-sizing:border-box
 }
+
+.inicio{
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    animation: crecimiento 60s infinite ease-in-out;
+}
+
+/* animacion planta */
+@keyframes crecimiento{
+    0%{
+        background-image: url(/img/animacion/1.png);
+    }
+    15%{
+        background-image: url(/img/animacion/2.png);
+    }
+    30%{
+        background-image: url(/img/animacion/3.png);
+    }
+    45%{
+        background-image: url(/img/animacion/4.png);
+    }
+    60%{
+        background-image: url(/img/animacion/5.png);
+    }
+    75%{
+        background-image: url(/img/animacion/6.png);
+    }
+    100%{
+        background-image: url(/img/animacion/7.png);
+    }
+}
+
+.btnMenu{
+    float: right;
+}
