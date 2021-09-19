@@ -1,103 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Empresa costarricense ubicada en San Ramón de Alajuela, dedicada a la venta de plantas ornamentales, abono orgánico,sustratos para plantas, diseño de jardines, talleres socioeducativos">
-    <meta name="keywords" content="Plantas, Plantas Ornamentales, Abono, Sustrato, Talleres socioeducativos, Diseño de Jardines,Emprendimiento San Ramón">
+    <meta name="description"
+        content="Empresa costarricense ubicada en San Ramón de Alajuela, dedicada a la venta de plantas ornamentales, abono orgánico,sustratos para plantas, diseño de jardines, talleres socioeducativos">
+    <meta name="keywords"
+        content="Plantas, Plantas Ornamentales, Abono, Sustrato, Talleres socioeducativos, Diseño de Jardines,Emprendimiento San Ramón">
     <meta author="Deivi Campos">
     <script defer src="https://unpkg.com/vue@next"></script>
     <script defer src="/main.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Plantas Crecer</title>
 </head>
+
 <body>
     <div class="container" id="container">
         <header class="header">
             <!-- navegación -->
             <div class="header__logo">
-                <img src="/img/iconos/menu.svg" alt="botón de menú" class="btnMenu" @click="MostrarMenu"/>
+                <img src="/img/iconos/menu.svg" alt="botón de menú" class="btnMenu" @click="MostrarMenu" />
             </div>
+            <div class="titleh1" id="titleh1"></div>
             <div class="header__nav" id="header__nav" v-show="Menu">
-                <ul class="lista">
+                <ul class="header__lista">
                     <li><a class="lista__item" href="/index.html">Inicio</a></li>
                     <li><a class="lista__item" href="/Paginas/sobreNosotros.html">Sobre Nosotros</a></li>
                     <li><a class="lista__item" href="/Paginas/productos.html">Productos</a></li>
                     <li><a class="lista__item" href="/Paginas/talleres.html">Talleres</a></li>
-                    <li><a class="lista__item"  href="/Paginas/galeria.html">Galería</a></li>
+                    <li><a class="lista__item" href="/Paginas/galeria.html">Galería</a></li>
                     <li><a class="lista__item" href="/Paginas/beneficios.html">Beneficios</a></li>
                 </ul>
             </div>
         </header>
-        <main v-show="!Menu">
+        <main class="main" v-show="!Menu">
             <!-- contenido  -->
             <div class="inicio">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, et.</p>
-            <p>Quas ullam, earum laudantium natus reiciendis voluptate aliquam beatae sunt!</p>
-            <p>Deleniti voluptatem obcaecati excepturi culpa nihil minus libero earum! Inventore!</p>
-            <p>Fuga impedit ducimus explicabo vero at consequuntur corrupti nam quasi.</p>
-            <p>Earum doloribus dolore quaerat eaque, impedit sint aliquam et blanditiis?</p>
-            <p>Minus temporibus pariatur vel sit explicabo quod similique, obcaecati aliquid!</p>
-            <p>Tenetur sed culpa odio atque aut quas quam ad. Nulla.</p>
-            <p>Suscipit officiis, laudantium nisi impedit fugit accusantium iure exercitationem minima!</p>
-            <p>Animi facere qui consectetur magni! Dolor, eum? Consequuntur, unde eligendi.</p>
-            <p>Repellat a dolores, nobis libero nam deserunt delectus molestiae qui.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, dolore.</p>
-            <p>Voluptates, assumenda sed. Esse ratione illo, totam quod alias iste?</p>
-            <p>Omnis delectus, nemo repudiandae aspernatur possimus cupiditate cumque pariatur eius.</p>
-            <p>Vel consequuntur ipsum nostrum dolores accusamus totam temporibus iure laboriosam!</p>
-            <p>Ab saepe soluta quaerat animi molestiae aliquam consectetur non iusto.</p>
-            <p>Nemo, quo enim! Consequatur labore optio cumque repellat veritatis nobis.</p>
-            <p>Officia iste odit quasi doloribus repudiandae nam sit sunt necessitatibus.</p>
-            <p>Quaerat minus ratione distinctio, cupiditate nisi maxime? Eum, dicta alias?</p>
-            <p>Sequi dolores atque dolorum numquam molestias, assumenda fugiat officiis laborum?</p>
-            <p>Consectetur quo quidem rerum voluptatibus in deserunt debitis ratione voluptas.</p>
-            <p>Et laborum facilis beatae ea est ex laudantium nemo cumque?</p>
-            <p>Libero dolores necessitatibus animi ipsum. Quibusdam aliquid consectetur voluptatum aliquam.</p>
-            <p>Facilis, accusamus molestias unde quas repellendus accusantium quisquam adipisci recusandae.</p>
-            <p>Voluptatibus cum omnis quaerat incidunt expedita, tenetur officiis sit odit.</p>
-            <p>Sapiente vitae autem maxime quaerat enim nesciunt quis ipsum accusamus?</p>
-            <p>Sed mollitia a veritatis molestiae inventore officiis accusamus perferendis distinctio.</p>
-            <p>Esse eos quod officia ad amet cupiditate animi vel consectetur!</p>
-            <p>Optio libero ducimus, cumque architecto excepturi illum sint deleniti labore.</p>
-            <p>Quia harum molestiae atque vel beatae, excepturi optio voluptate? Sit?</p>
-            <p>Ex, impedit obcaecati beatae enim magni reprehenderit repudiandae omnis earum!</p>
-            <p>Voluptatum nobis quaerat magnam modi minus vero numquam illo sequi?</p>
-            <p>Officiis ad ducimus, voluptatum assumenda architecto at maxime necessitatibus consectetur.</p>
-            <p>Architecto tempora ipsam unde vero vel perferendis eius sequi iste.</p>
-            <p>Vel voluptates nesciunt dolores, saepe delectus nostrum ut cupiditate quaerat.</p>
-            <p>Tenetur exercitationem illo atque velit maiores molestiae doloremque fuga incidunt.</p>
-            <p>Autem quod nesciunt officia praesentium sed ea sit cum aspernatur?</p>
-            <p>Exercitationem dolorem culpa neque nam est ad inventore numquam sed?</p>
-            <p>Quia, quasi a! Eaque optio facere totam reprehenderit ex eum?</p>
-            <p>Omnis quaerat aut mollitia error totam fugiat expedita dolorum cum.</p>
-            <p>Cum vero molestias ipsam dolorum architecto, ducimus illo quo eum!</p>
-            <p>Eveniet voluptatibus aspernatur facilis deleniti optio nostrum praesentium earum recusandae?</p>
-            <p>Repellat nemo harum odio quidem ratione optio quibusdam illum repellendus?</p>
-            <p>Eveniet reprehenderit pariatur consequatur aperiam aliquid dignissimos unde rerum similique.</p>
-            <p>Vel molestiae ipsa quas quaerat ad, porro velit rem laboriosam!</p>
-            <p>Similique dolorem ipsum optio. Suscipit eligendi quo unde provident ratione?</p>
-            <p>Ipsam voluptates quibusdam ullam nobis illum labore aut quod! Inventore?</p>
-            <p>Obcaecati vero itaque culpa molestiae blanditiis eveniet in autem vel.</p>
-            <p>Eum quibusdam sint sequi ut totam magni enim distinctio facere!</p>
-            <p>Cum consectetur dolorem cumque molestias voluptatibus, reiciendis facere quaerat accusantium?</p>
-            <p>Harum iste aliquam sequi distinctio quae, accusantium rem alias perspiciatis?</p>
-            <p>Fugiat explicabo nihil natus et, amet commodi quasi ab consequuntur!</p>
-            <p>Neque fuga incidunt facilis. Odio porro repellat saepe quaerat inventore?</p>
-            <p>Blanditiis odio aspernatur, illum consequuntur animi nostrum. Rerum, consequuntur nihil?</p>
-            <p>Voluptatibus at temporibus saepe modi. Quibusdam adipisci totam ab dolores!</p>
-            <p>Accusamus facere libero sint porro officiis voluptatum, dolor dolore pariatur!</p>
-            <p>Asperiores ipsam ab deserunt sapiente quis placeat odit, corrupti maxime.</p>
-            <p>Dolorem omnis natus, eaque quia laborum sequi dolor. Minus, nostrum?</p>
-            <p>Sequi, perferendis cum! Minus vel dolores cupiditate, tempore quo eius.</p>
-            <p>Ipsum voluptatibus animi distinctio in asperiores doloribus optio quo minus?</p>
-            <p>Officiis necessitatibus maxime recusandae exercitationem, reiciendis facere pariatur labore nobis.</p>
             </div>
+            <h1>{{saludo}}</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, est!</p>
+            <p>Perspiciatis dolores fugiat corrupti possimus, numquam soluta architecto necessitatibus voluptatem.</p>
+            <p>Laboriosam quod mollitia, deleniti autem repellendus ea nisi ex cum.</p>
+            <p>Culpa deserunt aliquam aspernatur adipisci libero commodi. Minus, tempora unde!</p>
+            <p>Praesentium tenetur recusandae odit tempore tempora at voluptatem ad cupiditate.</p>
+            <p>Quidem explicabo alias nostrum odio maiores veniam earum tenetur eaque!</p>
+            <p>Sit vitae excepturi nulla vel incidunt saepe asperiores libero sapiente.</p>
+            <p>Dolorem in inventore est neque a molestias, fugiat magnam obcaecati.</p>
+            <p>Error nobis expedita sint ullam alias iure deleniti itaque accusantium?</p>
+            <p>Libero dolorum iure asperiores ipsa excepturi velit ea maxime maiores.</p>
         </main>
-        <footer>
+        <footer v-show="!Menu">
             <!-- pie de página -->
+            <div class="footer__container">
+                <ul>
+                    <li><a href="https://www.facebook.com/Plantas-Crecer-101464542121296" target="blank">facebook</a></li>
+                    <li><a href="https://www.tiktok.com/@plantascrecer?"  target="blank">tik</a></li>
+                    <li><a href="https://www.instagram.com/plantascrecer.cr/?hl=es-la"  target="blank">insta</a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=50689696330&text=%C2%A1Hola,%20buenas!%20Me%20interesa%20un%20producto."  target="blank">whatsapp</a>
+                    </li>
+                    
+                </ul>
+            </div>
         </footer>
     </div>
 </body>
+
 </html>

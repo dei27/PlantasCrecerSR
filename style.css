@@ -6,7 +6,9 @@
 
 .container{
     width: 100vw;
-    height: 100vh;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
 }
 
 .inicio{
@@ -49,7 +51,7 @@
     right: 0;
 }
 
-.lista{
+.header__lista{
     height: 100vh;
     background-image: url(/img/animacion/vectorstock_78465.png);
     background-repeat: no-repeat;
@@ -65,7 +67,7 @@
 
 /* ----------------------------------------------------Media Query */
 @media (min-width:600px){
-    .lista{
+    .header__lista{
         height: 100%;
     }
 }
