@@ -4,6 +4,11 @@
     box-sizing:border-box
 }
 
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+
 .inicio{
     width: 200px;
     height: 200px;
@@ -40,4 +45,14 @@
 
 .btnMenu{
     float: right;
+}
+
+.lista{
+    height: 100vh;
+    line-height: 80px;
+    text-align: center;
+}
+
+.lista__item{
+    text-decoration: none;
 }

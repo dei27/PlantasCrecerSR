@@ -1,7 +1,13 @@
 const app = Vue.createApp({
     data(){
         return{
-            title:'hola'
+            title:'hola',
+            Menu:false
+        }
+    },
+    methods:{
+        MostrarMenu(){
+            this.Menu=!this.Menu
         }
     }
 
