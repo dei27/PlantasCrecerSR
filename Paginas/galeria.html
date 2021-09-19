@@ -16,7 +16,9 @@
     <div class="container" id="container">
         <header class="header">
             <!-- navegación -->
-            <img src="/img/iconos/menu.svg" alt="botón de menú" class="btnMenu" @click="MostrarMenu"/>
+            <div class="header__logo">
+                <img src="/img/iconos/menu.svg" alt="botón de menú" class="btnMenu" @click="MostrarMenu"/>
+            </div>
             <div class="header__nav" id="header__nav" v-show="Menu">
                 <ul class="lista">
                     <li><a class="lista__item" href="/index.html">Inicio</a></li>

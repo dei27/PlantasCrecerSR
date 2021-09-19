@@ -43,16 +43,29 @@
     }
 }
 
-.btnMenu{
-    float: right;
+.header__logo{
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 
 .lista{
     height: 100vh;
+    background-image: url(/img/animacion/vectorstock_78465.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     line-height: 80px;
     text-align: center;
 }
 
 .lista__item{
     text-decoration: none;
+}
+
+/* ----------------------------------------------------Media Query */
+@media (min-width:600px){
+    .lista{
+        height: 100%;
+    }
 }
