@@ -23,7 +23,6 @@
             <div class="header__logo">
                 <img src="/img/iconos/menu.svg" alt="botón de menú" class="btnMenu" @click="MostrarMenu" />
             </div>
-            <div class="titleh1" id="titleh1"></div>
             <div class="header__nav" id="header__nav" v-show="Menu">
                 <ul class="header__lista">
                     <li><a class="lista__item" href="/index.html">Inicio</a></li>
@@ -37,9 +36,10 @@
         </header>
         <main class="main" v-show="!Menu">
             <!-- contenido  -->
+            <div class="titleh2" id="titleh2"></div>
+            <h1 class="title2">Plantas Crecer</h1>
             <div class="inicio">
             </div>
-            <h1>{{saludo}}</h1>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, est!</p>
             <p>Perspiciatis dolores fugiat corrupti possimus, numquam soluta architecto necessitatibus voluptatem.</p>
             <p>Laboriosam quod mollitia, deleniti autem repellendus ea nisi ex cum.</p>
@@ -54,13 +54,15 @@
         <footer v-show="!Menu">
             <!-- pie de página -->
             <div class="footer__container">
-                <ul>
-                    <li><a href="https://www.facebook.com/Plantas-Crecer-101464542121296" target="blank">facebook</a></li>
-                    <li><a href="https://www.tiktok.com/@plantascrecer?"  target="blank">tik</a></li>
-                    <li><a href="https://www.instagram.com/plantascrecer.cr/?hl=es-la"  target="blank">insta</a></li>
-                    <li><a href="https://api.whatsapp.com/send?phone=50689696330&text=%C2%A1Hola,%20buenas!%20Me%20interesa%20un%20producto."  target="blank">whatsapp</a>
+                <ul class="footer__lista">
+                    <li class="footer__item"><a href="https://www.facebook.com/Plantas-Crecer-101464542121296" target="blank"><img src="/img/iconos/face1.svg" alt=""></i></a></li>
+                    <li class="footer__item" ><a href="https://www.tiktok.com/@plantascrecer?" target="blank"><img src="/img/iconos/tiktok1.svg" alt=""></a></li>
+                    <li class="footer__item"><a href="https://www.instagram.com/plantascrecer.cr/?hl=es-la" target="blank"><img src="/img/iconos/insta1.svg" alt=""></a></li>
+                    <li class="footer__item"><a href="https://api.whatsapp.com/send?phone=50689696330&text=%C2%A1Hola,%20buenas!%20Me%20interesa%20un%20producto." target="blank"><img src="/img/iconos/whatsapp1.svg" alt=""></i></a>
                     </li>
-                    
+                    <li class="footer__item"><a href="mailto:guadalupehr123@gmail.com" target="blank"><img src="/img/iconos/gmail.svg" alt=""></a>
+                    </li>
+                    <li class="footer__item"><a href="tel:89696330 " target="blank"><img src="/img/iconos/llamada.svg"></i></a>
                 </ul>
             </div>
         </footer>
