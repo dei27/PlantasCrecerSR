@@ -7,6 +7,7 @@ const app = Vue.createApp({
             Menu:false,
             saludo:'',
             fecha: new Date(),
+            background:['dia','tarde','noche']
         }
     },
     methods:{
@@ -55,7 +56,7 @@ app.mount("#container");
             day="domingo"
             break;
     }
-    if (horas<12 && horas>0) {
+    if (horas<12 && horas>=0) {
         saludar.innerHTML=`¡Buenos días, feliz ${day}! 🌻`
     }
     else if(horas>=12 && horas<18){
@@ -65,4 +66,10 @@ app.mount("#container");
         saludar.innerHTML=`¡Buenas noches, feliz ${day}! 🌷`
     }
 })();
+
+function ani(){
+    document.getElementById('img').classList.toggle('classname');
+}
+
+AOS.init();
 

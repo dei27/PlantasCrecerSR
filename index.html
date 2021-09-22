@@ -11,7 +11,10 @@
         content="Plantas, Plantas Ornamentales, Abono, Sustrato, Talleres socioeducativos, Diseño de Jardines,Emprendimiento San Ramón">
     <meta author="Deivi Campos">
     <script defer src="https://unpkg.com/vue@next"></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer src="/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Plantas Crecer</title>
 </head>
@@ -36,12 +39,13 @@
         </header>
         <main class="main" v-show="!Menu">
             <!-- contenido  -->
-            <div class="titleh2" id="titleh2"></div>
-            <h1 class="title2">Plantas Crecer</h1>
-            <div class="inicio">
+            <h2 class="titleh2 animate__animated animate__backInLeft" id="titleh2"></h2>
+            <div class="main__logo">
+                <img src="/img/logo.png" alt="" class="animate__animated animate__bounceInDown">
             </div>
+            <button onclick="ani()">Siembra una semilla</button>
+            <div id="img" class="item"></div>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam, est!</p>
-            <p>Perspiciatis dolores fugiat corrupti possimus, numquam soluta architecto necessitatibus voluptatem.</p>
             <p>Laboriosam quod mollitia, deleniti autem repellendus ea nisi ex cum.</p>
             <p>Culpa deserunt aliquam aspernatur adipisci libero commodi. Minus, tempora unde!</p>
             <p>Praesentium tenetur recusandae odit tempore tempora at voluptatem ad cupiditate.</p>
@@ -49,15 +53,20 @@
             <p>Sit vitae excepturi nulla vel incidunt saepe asperiores libero sapiente.</p>
             <p>Dolorem in inventore est neque a molestias, fugiat magnam obcaecati.</p>
             <p>Error nobis expedita sint ullam alias iure deleniti itaque accusantium?</p>
-            <p>Libero dolorum iure asperiores ipsa excepturi velit ea maxime maiores.</p>
+            <p data-aos="zoom-in-left">Libero dolorum iure asperiores ipsa excepturi velit ea maxime maiores.</p>
         </main>
         <footer v-show="!Menu">
             <!-- pie de página -->
             <div class="footer__container">
+                <h3>Síguenos en Redes Sociales</h3>
                 <ul class="footer__lista">
                     <li class="footer__item"><a href="https://www.facebook.com/Plantas-Crecer-101464542121296" target="blank"><img src="/img/iconos/face1.svg" alt=""></i></a></li>
                     <li class="footer__item" ><a href="https://www.tiktok.com/@plantascrecer?" target="blank"><img src="/img/iconos/tiktok1.svg" alt=""></a></li>
                     <li class="footer__item"><a href="https://www.instagram.com/plantascrecer.cr/?hl=es-la" target="blank"><img src="/img/iconos/insta1.svg" alt=""></a></li>
+                </ul>
+                <h3>Contáctenos</h3>
+                <ul class="footer__lista" data-aos="fade-up"
+                data-aos-duration="3000">
                     <li class="footer__item"><a href="https://api.whatsapp.com/send?phone=50689696330&text=%C2%A1Hola,%20buenas!%20Me%20interesa%20un%20producto." target="blank"><img src="/img/iconos/whatsapp1.svg" alt=""></i></a>
                     </li>
                     <li class="footer__item"><a href="mailto:guadalupehr123@gmail.com" target="blank"><img src="/img/iconos/gmail.svg" alt=""></a>

@@ -5,15 +5,17 @@ font-family: 'Balsamiq Sans', cursive;
 font-family: 'IBM Plex Sans', sans-serif;
 font-family: 'Playfair Display', serif;
 font-family: 'Rubik', sans-serif; */
+
 :root{
     --background:rgb(228, 255, 243);
     --backgroundHover:rgba(29, 150, 67, 0.671);
 }
+
 *{
     margin: 0;
     padding: 0;
     box-sizing:border-box;
-    font-size: 20px;
+    font-size: 14px;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -21,6 +23,7 @@ li{
     list-style: none;
 }
 
+/*contenedor principal*/
 .container{
     min-width:320px;
     width: 100%;
@@ -32,19 +35,31 @@ li{
     overflow: hidden;
 }
 
-.inicio{
+/*div que incluye la animacion*/
+.item{
+    width: 200px;
+    height: 200px;
+    float: left;
+    background-image: url(/img/animacion/0.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+/*nombre de clase que uso para activar la animación*/
+.classname{
     width: 200px;
     height: 200px;
     float: left;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    animation: crecimiento 60s infinite ease-in-out;
+    animation: crecimiento 200s ease-in-out;
 }
 
 /* animacion planta */
 @keyframes crecimiento{
-    0%{
+    10%{
         background-image: url(/img/animacion/1.png);
     }
     15%{
@@ -67,6 +82,7 @@ li{
     }
 }
 
+/*boton del menu*/
 .btnMenu{
     position: fixed;
     top: 0;
@@ -101,6 +117,7 @@ li{
     }
 }
 
+/*lista desplegable*/
 .header__lista{
     height: 100vh;
     background-image: url(/img/animacion/vectorstock_78465.png);
@@ -115,6 +132,7 @@ li{
     align-items: center;
 }
 
+/*contenido de la lista*/
 .lista__item{
     font-family: 'Anton', sans-serif;
     color: rgb(255, 255, 255);
@@ -125,20 +143,25 @@ li{
     font-weight: 700;
 }
 
+/*todos los elementos li dentro de lista*/
 .header__lista>li:hover{
     width: 100%;
     background-color:var(--backgroundHover);
 }
 
+
+/*todos los anchor*/
 a{
     text-decoration: none;
 }
 
+/*titulo de bienvenida*/
 .titleh2{
-    text-align:center;
-    padding: 60px 0 10px 0;
+    margin:20% 0 5% 5%;
+    text-align:left;
 }
 
+/*contenedor footer*/
 .footer__container{
     height: 300px;
     background-image: url(/img/animacion/14.png);
@@ -147,31 +170,24 @@ a{
     background-position: center top;
 }
 
-.title2 {
-    padding: 20px;
+/*tamaño del logo*/
+.animate__bounceInDown{
+    width: 70%;
+}
+
+/* contenedor del logo*/
+.main__logo{
     text-align: center;
-    white-space: nowrap;
-    overflow: hidden;     
-    font-size: 28px;
-    color: rgb(38, 185, 104);
+    margin: auto;
 }
 
-/* texto animacion */
-.title2 {
-  animation: animated-text 5s steps(30,end) 1s 1 normal both;
-}
-
-@keyframes animated-text{
-  from{width: 0;}
-  to{width: 100%;}
-}
-
+/*contenedor footer links*/
 .footer__lista{
     box-sizing: content-box;
     display: flex;
     justify-content: center;
     gap: 10px;
-    padding: 70px;
+    padding: 5px;
 }
 
 .footer__item:hover{
@@ -180,7 +196,7 @@ a{
 }
 
 /* ----------------------------------------------------Media Query */
-@media (min-width:600px){
+@media (min-width:700px){
     .container{
     height: 100%;
     }
