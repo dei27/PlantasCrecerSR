@@ -7,7 +7,9 @@ const app = Vue.createApp({
             Menu:false,
             saludo:'',
             fecha: new Date(),
-            background:['dia','tarde','noche']
+            bg1:'dia',
+            bg2:'tarde',
+            bg3:'noche'
         }
     },
     methods:{
@@ -30,6 +32,7 @@ app.mount("#container");
 
 (()=>{
     const saludar = document.getElementById("titleh2");
+    const saludar2 = document.getElementById("titleh3");
     let fecha = new Date();
     let day=fecha.getDay();
     let horas = fecha.getHours();
@@ -57,19 +60,27 @@ app.mount("#container");
             break;
     }
     if (horas<12 && horas>=0) {
-        saludar.innerHTML=`¡Buenos días, feliz ${day}! 🌻`
+        saludar.innerHTML="¡Buenos días! 🌻";
+        saludar2.innerHTML=`Feliz ${day}`;
+        document.getElementById('container').classList.add('dia')
     }
     else if(horas>=12 && horas<18){
-        saludar.innerHTML=`¡Buenas tardes, feliz ${day}! 🌼`
+        saludar.innerHTML="¡Buenas tardes! 🌼";
+        saludar2.innerHTML=`Feliz ${day}`;
+        document.getElementById('container').classList.add('tarde')
     }
     else{
-        saludar.innerHTML=`¡Buenas noches, feliz ${day}! 🌷`
+        saludar.innerHTML="¡Buenas noches! 🌷";
+        saludar2.innerHTML=`Feliz ${day}`;
+        document.getElementById('container').classList.add('noche')
     }
 })();
 
+/*funcion para quitar y poner clases*/
 function ani(){
     document.getElementById('img').classList.toggle('classname');
 }
 
+/*iniciar libreria*/
 AOS.init();
 
