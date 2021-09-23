@@ -59,7 +59,7 @@ li{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    animation: crecimiento 150s ease-in-out;
+    animation: crecimiento 60s linear;
 }
 
 /* animacion planta */
@@ -90,6 +90,7 @@ li{
 /*boton del menu*/
 .btnMenu{
     position: fixed;
+    z-index: 1;
     top: 0;
     right: 0;
     cursor: pointer;
@@ -173,7 +174,7 @@ a{
 }
 /*titulo de bienvenida*/
 .titleh2{
-    margin:5% 0 5% 5%;
+    margin:15% 0 5% 5%;
     text-align:center;
     color: var(--titulos);
     letter-spacing: 3px;
@@ -185,6 +186,11 @@ a{
     padding: 10px;
     color: var(--titulos);
     letter-spacing: 5px;
+    margin-top: 3%;
+}
+
+.titleh3--tam{
+    font-size: 22px;
 }
 
 .frase{
@@ -238,6 +244,7 @@ a{
 .footer__container{
     display: flex;
     gap: 5px;
+    justify-content: center;
 }
 
 .footer__item:hover{
@@ -302,7 +309,7 @@ p{
 .iframe{
     width: 100%;
 }
-/* ----------------------------------------------------Media Query */
+
 @media (min-width:700px){
     .container{
     height: 100%;

@@ -1,50 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Empresa costarricense ubicada en San Ramón de Alajuela, dedicada a la venta de plantas ornamentales, abono orgánico,sustratos para plantas, diseño de jardines, talleres socioeducativos">
-    <meta name="keywords" content="Plantas, Plantas Ornamentales, Abono, Sustrato, Talleres socioeducativos, Diseño de Jardines,Emprendimiento San Ramón">
+    <meta name="description"
+        content="Empresa costarricense ubicada en San Ramón de Alajuela, dedicada a la venta de plantas ornamentales, abono orgánico,sustratos para plantas, diseño de jardines, talleres socioeducativos">
+    <meta name="keywords"
+        content="Plantas, Plantas Ornamentales, Abono, Sustrato, Talleres socioeducativos, Diseño de Jardines,Emprendimiento San Ramón">
     <meta author="Deivi Campos">
     <script defer src="https://unpkg.com/vue@next"></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script defer src="/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
     <title>Plantas Crecer</title>
 </head>
+
 <body>
     <div class="container" id="container">
         <header class="header">
             <!-- navegación -->
             <div class="header__logo">
-                <img src="/img/iconos/menu.svg" alt="botón de menú" class="btnMenu" @click="MostrarMenu"/>
+                <img src="/img/iconos/menu.svg" alt="botón de menú" class="btnMenu" @click="MostrarMenu" />
             </div>
             <div class="header__nav" id="header__nav" v-show="Menu">
                 <ul class="header__lista">
                     <li><a class="lista__item" href="/index.html">Inicio</a></li>
-                    <li><a class="lista__item" href="sobreNosotros.html">Sobre Nosotros</a></li>
-                    <li><a class="lista__item" href="productos.html">Productos</a></li>
-                    <li><a class="lista__item" href="talleres.html">Talleres</a></li>
-                    <li><a class="lista__item"  href="galeria.html">Galería</a></li>
-                    <li><a class="lista__item" href="beneficios.html">Beneficios</a></li>
+                    <li><a class="lista__item" href="/Paginas/sobreNosotros.html">Sobre Nosotros</a></li>
+                    <li><a class="lista__item" href="/Paginas/productos.html">Productos</a></li>
+                    <li><a class="lista__item" href="/Paginas/talleres.html">Talleres</a></li>
+                    <li><a class="lista__item" href="/Paginas/galeria.html">Galería</a></li>
+                    <li><a class="lista__item" href="/Paginas/beneficios.html">Beneficios</a></li>
                 </ul>
             </div>
         </header>
-        <main v-show="!Menu">
+        <main class="main" v-show="!Menu">
             <!-- contenido  -->
-            <div class="inicio">
-    
+            <h2 class="titleh2 animate__animated animate__backInLeft" id="titleh2"></h2>
+            <h2 class="titleh3 animate__animated animate__bounceInRight" id="titleh3"></h2>
+            <div class="main__logo">
+                <img src="/img/logo.png" alt="" class="animate__animated animate__bounceInDown">
+            </div>
+            <h1 class="title1 animate__animated animate__backInUp">Emprendimiento Ramonense</h1>
+            <div class="main__text">
+                <p data-aos="fade-up-right">Aprende todo lo relacionado sobre las plantas con nosotros.</p>
+                <img src="/img/decoracion/2.1" alt="" data-aos="fade-down-right" class="item2">
+                <p data-aos="flip-up">Contamos con una amplia variedad de plantas de excelente calidad.</p>
+                <img src="/img/decoracion/15.png" alt="" class="item3" data-aos="fade-down-left">
+                <button onclick="ani()" class="main__btn" data-aos="zoom-in-left">Siembra una semilla</button>
+                <div id="img" class="item"></div>
+                <div  data-aos="zoom-in-up">
+                    <p class="frase"><q class="frase">«La vida es un jardín, en el que cosechas lo que siembras».</q> Paulo Coelho.</p>
+                </div>
+                <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.374457315004!2d-84.49487138520526!3d10.068372092804351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDA0JzA2LjEiTiA4NMKwMjknMzMuNyJX!5e0!3m2!1ses!2scr!4v1632343435864!5m2!1ses!2scr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <p>Ubicados en Calle Arias, Santiago de San Ramón.</p>
             </div>
         </main>
-        <footer>
+        <footer v-show="!Menu">
             <!-- pie de página -->
+            <div class="footer__container">
+                <div>
+                    <h3 data-aos="zoom-in">Contáctenos</h3>
+                    <ul class="footer__lista" data-aos="fade-up">
+                        <li class="footer__item"><a href="tel:89696330 " target="blank"><img
+                            src="/img/iconos/llamada.svg"></i></a>
+                        <li class="footer__item"><a href="mailto:guadalupehr123@gmail.com" target="blank"><img
+                                    src="/img/iconos/gmail.svg" alt=""></a>
+                        </li>
+                        <li class="footer__item"><a
+                            href="https://api.whatsapp.com/send?phone=50689696330&text=%C2%A1Hola,%20buenas!%20Me%20interesa%20un%20producto."
+                            target="blank"><img src="/img/iconos/whatsapp1.svg" alt=""></i></a>
+                    </li> 
+                    </ul>
+                </div>
+               <div>
+                <h3 data-aos="zoom-in">Redes Sociales</h3>
+                <ul class="footer__lista" data-aos="fade-up">
+                    <li class="footer__item"><a href="https://www.facebook.com/Plantas-Crecer-101464542121296"
+                            target="blank"><img src="/img/iconos/face1.svg" alt=""></i></a></li>
+                    <li class="footer__item"><a href="https://www.tiktok.com/@plantascrecer?" target="blank"><img
+                                src="/img/iconos/tiktok1.svg" alt=""></a></li>
+                    <li class="footer__item"><a href="https://www.instagram.com/plantascrecer.cr/?hl=es-la"
+                            target="blank"><img src="/img/iconos/insta1.svg" alt=""></a></li>
+                </ul>
+               </div>
+            </div>
         </footer>
     </div>
 </body>
 </html>
-
-
-
-
-
-
