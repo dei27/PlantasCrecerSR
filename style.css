@@ -9,7 +9,7 @@ font-family: 'Rubik', sans-serif; */
 :root{
     --backgroundDia:#2fdd9a3d;
     --backgroundTarde:#19d8433d;
-    --backgroundNoche:#40c0193d;
+    --backgroundNoche:#326b2134;
     --backgroundHover:rgba(29, 150, 67, 0.671);
     --titulos: rgb(11, 77, 62);
 }
@@ -59,7 +59,7 @@ li{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    animation: crecimiento 60s linear;
+    animation: crecimiento 30s linear;
 }
 
 /* animacion planta */
@@ -125,7 +125,7 @@ li{
 /*lista desplegable*/
 .header__lista{
     height: 100vh;
-    background-image: url(/img/animacion/vectorstock_78465.png);
+    background-image: url(/img/animacion/bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -191,6 +191,11 @@ a{
 
 .titleh3--tam{
     font-size: 22px;
+}
+
+/*titulo en talleres*/
+.titleh3--tam1{
+    text-align: left;
 }
 
 .frase{
