@@ -52,3 +52,12 @@ function ani(){
 /*iniciar libreria*/
 AOS.init();
 
+/*crear galeria con ciclo*/
+(() => {
+    const buttons = document.getElementById("row");
+
+    for (let i = 1; i < 92; i++) {
+         buttons.innerHTML +=`<div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/img/galeria/(${i}).jpeg"data-lightbox="photos"><img class="img-fluid" src="/img/galeria/(${i}).jpeg" alt=""flor para la venta"></a>Imagen ${i}</div>`;
+    }
+})();
+

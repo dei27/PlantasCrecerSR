@@ -36,13 +36,12 @@ li {
     background-image: url(/img/animacion/wave.svg);
     background-repeat: no-repeat;
     overflow: hidden;
-    margin: auto;
     gap: 60px;
 }
 
 
 /*div que incluye la animacion planta crecer*/
-.item {
+.itemAni {
     width: 200px;
     height: 200px;
     margin: auto;
@@ -340,6 +339,34 @@ p {
     width: 100%;
 }
 
+/*talleres*/
+.containerTa {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.item__taller{
+    width: 100%;
+}
+
+/*galeria*/
+.photo-gallery {
+    color:#313437;
+  }
+  
+  .photo-gallery p {
+    color:#7d8285;
+  }
+  
+  .photo-gallery h2 {
+    font-weight:bold;
+    margin-bottom:40px;
+    padding-top:40px;
+    color:inherit;
+  }
+ 
+
 /*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------MEDIA QUERY------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 @media (min-width:600px) {
 
@@ -438,8 +465,60 @@ p {
         align-items: center;
         gap: 10px;
     }
+
+    /*talleres*/
+    .containerTa {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        gap: 40px;
+    }
+
+    .item1__taller{
+        width: 80%;
+        margin: auto;
+    }
+
+    .item__taller {
+        width: 50%;
+        margin: auto;
+    }
+
+    .containerTa__item1,.containerTa__item2{
+        display: flex;
+        
+        align-items: center;
+    }
+
 }
 
+/*galeria*/
+@media (max-width:767px) {
+    .photo-gallery h2 {
+      margin-bottom:25px;
+      padding-top:25px;
+      font-size:24px;
+    }
+    .photo-gallery .intro {
+        font-size:16px;
+        max-width:500px;
+        margin:0 auto 40px;
+      }
+      
+      .photo-gallery .intro p {
+        margin-bottom:0;
+      }
+      
+      .photo-gallery .photos {
+        padding-bottom:20px;
+      }
+      
+      .photo-gallery .item {
+        padding-bottom:30px;
+      }
+  }
+  
+  
 /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Segunda Media Query-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 @media (min-width:900px) {
 
@@ -541,7 +620,7 @@ p {
         grid-area: itemW12;
     }
 
-    .itemW13{
+    .itemW13 {
         grid-area: itemW13;
     }
 
@@ -550,16 +629,16 @@ p {
         justify-self: right;
     }
 
-    .itemW15{
+    .itemW15 {
         grid-area: itemW15;
         justify-self: center;
     }
 
-    .itemW16{
+    .itemW16 {
         grid-area: itemW16;
     }
 
-    .itemW17{
+    .itemW17 {
         grid-area: itemW17;
         justify-self: center;
     }
@@ -568,7 +647,7 @@ p {
     .wrapperP {
         display: grid;
         column-gap: 15px;
-        row-gap: 40px; 
+        row-gap: 40px;
         grid-template-areas:
             "itemW1 itemW1 itemW1 itemW1"
             "itemW3 itemW3 itemW5 itemW7"
@@ -577,7 +656,12 @@ p {
             "itemW10 itemW12 itemW17 itemW17"
             "itemW13 itemW13 itemW13 itemW13"
             "itemW14 itemW14 itemW15 .";
-            grid-template-columns: 25%;
+        grid-template-columns: 25%;
+    }
+
+    .item1__taller{
+        width: 50%;
+        margin: auto;
     }
 
 }
