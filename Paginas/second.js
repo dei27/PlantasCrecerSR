@@ -56,8 +56,10 @@ AOS.init();
 (() => {
     const buttons = document.getElementById("row");
 
-    for (let i = 1; i < 92; i++) {
-         buttons.innerHTML +=`<div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/img/galeria/(${i}).jpeg"data-lightbox="photos"><img class="img-fluid" src="/img/galeria/(${i}).jpeg" alt=""flor para la venta"></a>Imagen ${i}</div>`;
+    for (let i = 1; i < 91; i++) {
+         buttons.innerHTML +=`<div class="col-sm-6 col-md-4 col-lg-3 item"><a href="/img/galeria/(${i}).jpeg"data-lightbox="photos"><img class="img-fluid" src="/img/galeria/(${i}).jpeg" alt=""flor para la venta"></a><div class="textImag"><a
+         href="https://api.whatsapp.com/send?phone=50689696330&text=%C2%A1Hola,%20buenas!%20Me%20interesa%20un%20producto."
+         target="blank"><img src="/img/iconos/whatsapp1.svg" alt="" class="footer__logo"></a> Imagen ${i}</div></div>`;
     }
 })();
 
