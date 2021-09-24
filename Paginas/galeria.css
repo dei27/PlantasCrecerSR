@@ -17,7 +17,8 @@ font-family: 'Rubik', sans-serif; */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     font-size: 24px;
     font-family: 'Rubik', sans-serif;
 }
@@ -31,8 +32,13 @@ li{
     min-width: 320px;
     max-width: 1400px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
     background-image: url(/img/animacion/wave.svg);
     background-repeat: no-repeat;
     overflow: hidden;
@@ -50,32 +56,71 @@ li{
 
 /* animacion boton menu  */
 .btnMenu:hover {
-    animation: rotar 1.5s alternate;
+    -webkit-animation: rotar 1.5s alternate;
+            animation: rotar 1.5s alternate;
+}
+
+@-webkit-keyframes rotar {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+
+    20% {
+        -webkit-transform: rotate(10deg);
+                transform: rotate(10deg);
+    }
+
+    40% {
+        -webkit-transform: rotate(-15deg);
+                transform: rotate(-15deg);
+    }
+
+    60% {
+        -webkit-transform: rotate(15deg);
+                transform: rotate(15deg);
+    }
+
+    80% {
+        -webkit-transform: rotate(-10deg);
+                transform: rotate(-10deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
 }
 
 @keyframes rotar {
     0% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
     }
 
     20% {
-        transform: rotate(10deg);
+        -webkit-transform: rotate(10deg);
+                transform: rotate(10deg);
     }
 
     40% {
-        transform: rotate(-15deg);
+        -webkit-transform: rotate(-15deg);
+                transform: rotate(-15deg);
     }
 
     60% {
-        transform: rotate(15deg);
+        -webkit-transform: rotate(15deg);
+                transform: rotate(15deg);
     }
 
     80% {
-        transform: rotate(-10deg);
+        -webkit-transform: rotate(-10deg);
+                transform: rotate(-10deg);
     }
 
     100% {
-        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
     }
 }
 
@@ -88,10 +133,19 @@ li{
     background-position: center;
     line-height: 80px;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 /*contenido de la lista*/
@@ -120,7 +174,8 @@ li{
 }
 
 .title1 {
-    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
     text-align: center;
     color: rgb(5, 121, 63);
     text-shadow: 2px 2px 2px rgb(255, 255, 255);
@@ -160,22 +215,35 @@ li{
 
 /*contenedor footer links*/
 .footer__lista {
-    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 10px;
     padding: 5px;
 }
 
 .footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 5px;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .footer__item:hover {
 
-    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+
+        -ms-transform: scaleX(-1);
+
+            transform: scaleX(-1);
 }
 
 h3 {
@@ -188,8 +256,13 @@ h3 {
 
 /* contenedor del texto */
 .main__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
     gap: 30px;
     width: 100%;
     margin-top: 5%;
