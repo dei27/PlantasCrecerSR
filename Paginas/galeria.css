@@ -26,10 +26,6 @@ li{
     list-style: none;
 }
 
-a{
-    text-decoration: none;
-}
-
 /*contenedor principal*/
 .containerG {
     min-width: 320px;
@@ -107,6 +103,7 @@ a{
     text-shadow: 2px 2px 2px rgba(46, 43, 43, 0.856);
     font-family: 'Playfair Display', serif;
     font-weight: 700;
+    text-decoration: none;
 }
 
 /*todos los elementos li dentro de lista*/
@@ -118,7 +115,7 @@ a{
 
 
 /*todos los anchor*/
-a {
+.lista__item a{
     text-decoration: none;
 }
 
